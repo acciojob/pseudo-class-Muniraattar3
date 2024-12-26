@@ -1,1 +1,23 @@
 /*  your css code here. If applicable */
+#container {
+    margin: 20px;
+    position: relative; /* Ensures pseudo-elements align relative to the container */
+    font-size: 16px; /* Default font size for the container */
+}
+
+/* Pseudo-element for content before the container */
+#container::before {
+    content: "Before Element ";
+    color: #f00; /* Red color for the text */
+    font-size: 20px; /* Font size for the pseudo-element */
+    display: block; /* Ensures it appears above the container */
+}
+
+/* Pseudo-element for content after the container */
+#container::after {
+    content: " After Element";
+    color: #f00; /* Red color for the text */
+    font-size: 20px; /* Font size for the pseudo-element */
+    display: block; /* Ensures it appears below the container */
+    margin-top: 10px; /* Adds space between the container and the after content */
+}
